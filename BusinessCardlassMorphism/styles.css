@@ -1,0 +1,96 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  display: grid;
+  place-items: center;
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+#card {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 1s ease-out;
+}
+
+#card:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #7729ee;
+}
+
+#card #content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+  gap: 20px;
+}
+
+#card #content #imgBx {
+  position: relative;
+  width: 120px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+
+#card #content #imgBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#card #content #details{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #111;
+}
+
+#card #content #details div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#card #content #details h3{
+  font-weight: 600;
+}
+
+#card #content #details ion-icon{
+  font-size: 1.4em;
+}

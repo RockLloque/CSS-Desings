@@ -1,0 +1,36 @@
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.birdBox {
+  height: 400px;
+  width: 400px;
+  background-image: url('./background_blue_bird.jpg');
+  background-position: center top 25%;
+  border-radius: 20px;
+}
+
+
+.birdBox::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400px;
+  background: linear-gradient(
+    90deg,
+    #363EA0,
+    #3278D8,
+    #59BFD7
+  );
+  z-index: -1;
+
+  transform: rotate(15deg);
+}

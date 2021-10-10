@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Checkout Form</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+  <div class="payment">
+    <div class="bg"></div>
+    <div class="card">
+      <img src="./img/chip.png" alt="Chip" class="chip">
+      <div class="logo"></div>
+      <h2 class="bankName" contenteditable="true">Bank Name</h2>
+      <form action="">
+        <div class="inputBox">
+          <span>Card No.</span>
+          <input 
+            type="text" 
+            placeholder="0123 4567 8901" 
+            pattern="\d{4}\s?\d{4}\s?\d{4}"
+            maxlength="14"
+          >
+        </div>
+        <div class="inputBox">
+          <span>Card Holder</span>
+          <input 
+            type="text" 
+            placeholder="John Doe" 
+          >
+        </div>
+        <div class="group">
+          <div class="inputBox">
+            <span>Valid Thru</span>
+            <input 
+              type="text" 
+              placeholder="MM/YY" 
+              maxlength="5"
+            >
+          </div>
+          <div class="inputBox">
+          <span>CCV</span>
+          <input 
+            type="password" 
+            placeholder="****" 
+            maxlength="4"
+          >
+          </div>
+        </div>
+      </form>
+    </div>
+    <button class="btn">Confirm and Pay</button>
+  </div>
+</body>
+</html>
