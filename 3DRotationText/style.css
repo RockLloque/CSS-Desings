@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  background-color: #000;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.panel 
+{
+  width: 100px;
+  aspect-ratio: 1;
+  border: 1px solid white;
+}
