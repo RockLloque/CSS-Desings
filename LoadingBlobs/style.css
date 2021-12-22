@@ -1,0 +1,196 @@
+*,
+*::before,
+*::after
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body
+{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container
+{
+  background-color: #d9c5cf;
+  border-radius: 100px;
+  width: 520px;
+  height: 120px;
+  position: relative;
+}
+
+.container > div 
+{
+  position: absolute;
+  height: 80px;
+  aspect-ratio: 1;
+  border-radius: 50px;
+  top: 20px;
+}
+
+.container .one
+{
+  background-color: #69143e;
+  left: 20px;
+}
+.container .two
+{
+  background-color: #ff5f36;
+  left: 120px;
+}
+.container .three
+{
+  background-color: #f9a229;
+  left: 220px;
+}
+.container .four
+{
+  background-color: #edde2e;
+  left: 320px;
+}
+.container .five
+{
+  background-color: #f4e4c1;
+  left: 420px;
+}
+
+.animate 
+{
+  animation-duration: 0.75s;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: animate-fade;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-fill-mode: backwards;
+}
+
+
+
+.animate.fade 
+{
+  animation-name: animate-fade;
+  animation-timing-function: ease;
+}
+
+@keyframes animate-fade
+{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.animate.pop
+{
+  animation-name: animate-pop;
+}
+
+@keyframes animate-pop
+{
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate.blur 
+{
+  animation-name: animate-blur;
+  animation-timing-function: ease;
+}
+
+@keyframes animate-blur 
+{
+  0% {
+    opacity: 0;
+    filter: blur(15px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.animate.glow{
+  animation-name: animate-glow;
+  animation-timing-function: ease;
+}
+
+@keyframes animate-glow 
+{
+  0% {
+    opacity: 0;
+    filter: brightness(3), saturate(3);
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1), saturate(1);
+    transform: scale(1);
+  }
+}
+
+.animate.grow{
+  animation-name: animate-grow;
+}
+
+@keyframes animate-grow 
+{
+  0% {
+    opacity: 0;
+    transform: scale(1, 0);
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate.splat{
+  animation-name: animate-splat;
+}
+
+@keyframes animate-splat 
+{
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(20deg) translateY(-30px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1) rotate(15deg);
+  }
+  85% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate.flip{
+  animation-name: animate-flip;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+@keyframes animate-flip 
+{
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-120deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}
